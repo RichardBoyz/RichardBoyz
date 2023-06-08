@@ -1,5 +1,6 @@
 "use client";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,11 +14,19 @@ export default function Home() {
         darkMode ? "dark dark--mode__animation" : "light--mode__animation"
       } main--page__color`}
     >
-      <main className="flex min-h-screen flex-col items-center overflow-visible dark:bg-black background--color">
+      <main className="flex min-h-screen flex-col items-center overflow-visible dark:bg-black background--color z-0">
         {/* <section className="bg-blue-300 w-full h-12 flex fixed">
           <button onClick={() => setDarkMode(!darkMode)}>Dark mode</button>
         </section> */}
         <Header setDarkModeAction={toggleDarkMode} />
+
+        <section id="hero" className=" snap-start">
+          <Hero></Hero>
+        </section>
+
+        <section id="about" className=" snap-center">
+          {/* <About></About> */}
+        </section>
       </main>
     </div>
   );
