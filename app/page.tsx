@@ -2,6 +2,7 @@
 import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WorkExperience from "@/components/WorkExperience";
 import { useState } from "react";
 
 export default function Home() {
@@ -27,6 +28,10 @@ export default function Home() {
 
         <section id="about" className=" snap-center">
           <About></About>
+        </section>
+
+        <section id="experience" className="snap-center">
+          <WorkExperience></WorkExperience>
         </section>
       </main>
     </div>
