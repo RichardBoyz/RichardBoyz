@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 type Props = {};
@@ -11,6 +11,15 @@ export default function Hero({}: Props) {
     loop: true,
     delaySpeed: 1500,
   });
+  const handleScroll: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const { name } = event.currentTarget.dataset;
+    if (name) {
+      const element = document.getElementById(name);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <div className=" p-12 w-screen flex flex-col items-center min-h-screen">
       <div className="water--container">
@@ -39,8 +48,8 @@ export default function Hero({}: Props) {
       <div className=" text-gray-500 p-8 tracking-[10px] text-center">
         Software engineer
       </div>
-      <div className="dark:text-slate-300 pt-5">
-        <Link href="#about">
+      <div className="dark:text-slate-300 pt-5 flex gap-2 flex-wrap">
+        {/* <Link href="#about">
           <button className=" custom--btn">About</button>
         </Link>
         <Link href="#experience">
@@ -51,7 +60,40 @@ export default function Hero({}: Props) {
         </Link>
         <Link href="#projects">
           <button className=" custom--btn">Projects</button>
-        </Link>
+        </Link> */}
+        <button
+          className=" custom--btn"
+          onClick={handleScroll}
+          data-name="about"
+        >
+          About
+        </button>
+
+        <button
+          className=" custom--btn"
+          onClick={handleScroll}
+          data-name="experience"
+        >
+          Experience
+        </button>
+
+        <button
+          className=" custom--btn"
+          onClick={handleScroll}
+          data-name="skills"
+          disabled
+        >
+          Skills
+        </button>
+
+        <button
+          className=" custom--btn"
+          onClick={handleScroll}
+          data-name="about"
+          disabled
+        >
+          Projects
+        </button>
       </div>
     </div>
   );
