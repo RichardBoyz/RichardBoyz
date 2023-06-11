@@ -41,7 +41,10 @@ export default function Header({ setDarkModeAction }: Props) {
         initial={{ x: 300, scale: 0.1, opacity: 0 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
       >
-        <button className="dark:text-cyan-200" onClick={setDarkModeAction}>
+        <button
+          className="dark:text-cyan-200 text-blue-950"
+          onClick={setDarkModeAction}
+        >
           Mode
         </button>
         <SocialIcon
@@ -51,7 +54,10 @@ export default function Header({ setDarkModeAction }: Props) {
           bgColor="transparent"
           className="dark:text-blue-200 text-blue-950"
         />
-        <p className="mail--text" onClick={sendEmail}>
+        <p
+          className="mail--text text-blue-950 dark:text-cyan-200"
+          onClick={sendEmail}
+        >
           Get In Touch
         </p>
       </motion.div>

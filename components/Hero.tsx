@@ -12,7 +12,7 @@ export default function Hero({}: Props) {
     delaySpeed: 1500,
   });
   return (
-    <div className=" p-12 w-screen flex flex-col items-center">
+    <div className=" p-12 w-screen flex flex-col items-center min-h-screen">
       <div className="water--container">
         <motion.div
           className="absolute"
