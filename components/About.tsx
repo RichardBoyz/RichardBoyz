@@ -16,13 +16,14 @@ export default function About({}: Props) {
         About
       </h3>
       <motion.img
-        initial={{ x: -300, opacity: 0 }}
+        initial={{ x: -200, opacity: 0 }}
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
         whileInView={{ x: 0, opacity: 1 }}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56
         rounded-full object-cover md:rounded-lg
          md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]
+         mt-10 md:mt-0
         "
         src="https://drive.google.com/uc?id=1b7saXJaSwXDi9Q_6u_rYia5wnpoLcLdf"
       />
