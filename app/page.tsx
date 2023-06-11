@@ -1,4 +1,5 @@
 "use client";
+import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { useState } from "react";
@@ -25,7 +26,7 @@ export default function Home() {
         </section>
 
         <section id="about" className=" snap-center">
-          {/* <About></About> */}
+          <About></About>
         </section>
       </main>
     </div>
