@@ -15,12 +15,15 @@
   justify-content: space-between;
   padding: 0 2rem;
   height: 100px;
-  background-color: rgba(70, 59, 43, 0.5);
+  background-color: rgba(162, 187, 103, 0.9);
   transition: all 0.2s;
+  top: 0;
+  z-index: 2;
+  overflow-x: hidden;
 }
 
 .dark .header {
-  background-color: unset;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .background--color {
