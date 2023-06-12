@@ -11,11 +11,11 @@ function WorkExperience({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className=" min-h-screen dark:text-slate-200 relative 
-    flex flex-col text-left md:flex-row
+    flex flex-col text-left
      w-screen px-10 justify-evenly 
-    mx-auto items-center"
+    mx-auto items-center py-[100px]"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="uppercase text-center tracking-[20px] text-gray-500 text-2xl">
         Experience
       </h3>
 
