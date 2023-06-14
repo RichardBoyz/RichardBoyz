@@ -9,6 +9,9 @@ export default function Header({ setDarkModeAction }: Props) {
   const sendEmail = () => {
     window.location.href = "mailto:r1382333@gmail.com";
   };
+  const openResume = () => {
+    window.open("https://www.cakeresume.com/r1382333", "_blank");
+  };
   return (
     <header className="header">
       <motion.div
@@ -32,6 +35,7 @@ export default function Header({ setDarkModeAction }: Props) {
         <div
           className="flex justify-center items-center cursor-pointer"
           style={{ width: 50, height: 50 }}
+          onClick={openResume}
         >
           <FileText className="dark:text-blue-200 w-full h-6 text-blue-950"></FileText>
         </div>
