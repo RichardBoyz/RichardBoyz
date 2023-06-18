@@ -4,8 +4,12 @@
 
 @import "tailwindcss/utilities";
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   display: none;
+} */
+
+body {
+  @apply scrollbar scrollbar-track-gray-700 scrollbar-thumb-[#5f9ea0]/80 overflow-x-hidden;
 }
 
 .header {
@@ -101,5 +105,14 @@
     border-[#808080]
     text-[#808080] hover:border-[#2f4f4f] 
      hover:text-[#2f4f4f];
+  }
+
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b py-2 md:py-4 px-2
+  border-[#242424] w-full
+  dark:bg-[#0f1113]
+  text-gray-500 placeholder-gray-500 transition-all 
+  focus:text-[#6d7e45]/70 hover:border-[#6d7e45]/70
+  dark:focus:text-[#04aef5]/40 dark:hover:border-[#04aef5]/40;
   }
 }
