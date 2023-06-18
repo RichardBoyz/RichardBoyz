@@ -32,7 +32,7 @@ function Skills({}: Props) {
       degree: 50,
     },
     {
-      url: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png",
+      url: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-5-1175140.png",
       degree: 50,
     },
     {
@@ -69,7 +69,7 @@ function Skills({}: Props) {
         滑鼠可移動到圖示上
       </h3>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 gap-5 xl:pt-8">
         {data.map((element, index) => (
           <Skill url={element.url} degree={element.degree} key={index} />
         ))}
