@@ -16,7 +16,7 @@ function Skill({ directionLeft = false, url = "", degree = 60 }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         src={url}
         className="rounded-full border border-gray-500 
-         object-contain w-14 h-14 md:w-24 md:h-24 xl:w-32 xl:h-32
+         object-contain w-14 h-14 md:w-24 md:h-24 xl:w-28 xl:h-28
         filter group-hover:grayscale transition duration-300 ease-in-out
         "
       />
