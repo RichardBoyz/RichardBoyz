@@ -1,16 +1,26 @@
 "use client";
 import About from "@/components/About";
+import ContactMe from "@/components/ContactMe";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
-import { useState } from "react";
+import { MouseEventHandler, useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+  };
+  const handleScroll: MouseEventHandler<HTMLImageElement> = (event) => {
+    const { name } = event.currentTarget.dataset;
+    if (name) {
+      const element = document.getElementById(name);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
   return (
     <div
@@ -36,13 +46,29 @@ export default function Home() {
           <WorkExperience></WorkExperience>
         </section>
 
-        <section id="skills">
+        <section id="skills" className="snap-center">
           <Skills></Skills>
         </section>
 
-        <section id="projects">
+        <section id="projects" className="snap-center">
           <Projects></Projects>
         </section>
+
+        <section id="contact" className="snap-start">
+          <ContactMe></ContactMe>
+        </section>
+
+        <footer className="sticky bottom-5 w-full">
+          <div className="flex items-center justify-center">
+            <img
+              onClick={handleScroll}
+              data-name="hero"
+              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              src="https://drive.google.com/uc?id=1KVr3bH8vgATepmnDf1vSQ3yuOPZoPixO"
+              alt=""
+            />
+          </div>
+        </footer>
       </main>
     </div>
   );
