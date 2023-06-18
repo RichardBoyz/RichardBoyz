@@ -2,6 +2,7 @@
 import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
 import { useState } from "react";
@@ -37,6 +38,10 @@ export default function Home() {
 
         <section id="skills">
           <Skills></Skills>
+        </section>
+
+        <section id="projects">
+          <Projects></Projects>
         </section>
       </main>
     </div>
