@@ -81,7 +81,6 @@ export default function Hero({}: Props) {
           className=" custom--btn"
           onClick={handleScroll}
           data-name="skills"
-          disabled
         >
           Skills
         </button>
@@ -89,8 +88,7 @@ export default function Hero({}: Props) {
         <button
           className=" custom--btn"
           onClick={handleScroll}
-          data-name="about"
-          disabled
+          data-name="projects"
         >
           Projects
         </button>

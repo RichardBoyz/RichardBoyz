@@ -56,7 +56,7 @@ function Projects({}: Props) {
               viewport={{ once: true }}
               src={project.img}
               alt=""
-              className="max-h-[500px] lg:max-h-[550px] object-cover"
+              className="max-h-[300px] md:max-h-[500px] lg:max-h-[550px] object-cover"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className=" text-2xl font-semibold text-center">
