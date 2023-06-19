@@ -18,7 +18,7 @@ function Projects({}: Props) {
     {
       img: "https://i.imgur.com/NXgBPuS.png",
       description:
-        "簡易聊天室 : Flutter App 和 Firebase 結合資料處理，也使用 Pust Notification",
+        "簡易聊天室 : Flutter App 和 Firebase 結合資料處理，也使用 Push Notification",
     },
   ];
   return (
