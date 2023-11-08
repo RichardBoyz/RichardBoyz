@@ -6,21 +6,36 @@ type Props = {};
 function Projects({}: Props) {
   const projects = [
     {
+      img: "https://i.imgur.com/w7nv1WQ.jpeg",
+      description:
+        "可以多人連線對戰的剪刀石頭布遊戲 : 前端使用 React，配合 Firebase 實現及時對戰",
+      note: "我是連結 Click me",
+      link: "https://rock-paper-scissors-4a35f.web.app/",
+    },
+    {
       img: "https://i.imgur.com/l1OeJ2v.png",
       description:
         "實作 JWT 驗證和登入 (JSON Web Token) : 前端使用 React，後端使用 NestJS，資料庫使用 MongoDB",
+      note: "還在GitHub上之 1",
     },
     {
       img: "https://i.imgur.com/JvmEzkp.png",
       description:
         "簡易問答遊戲 : Flutter App 使用 Bloc 狀態管理。可以記錄答對或答錯的次數，且每提倒數15秒的問答遊戲",
+      note: "還在GitHub上之 2",
     },
     {
       img: "https://i.imgur.com/NXgBPuS.png",
       description:
         "簡易聊天室 : Flutter App 和 Firebase 結合資料處理，也使用 Push Notification",
+      note: "還在GitHub上之 3",
     },
   ];
+
+  const handleClickProject = () => {
+    window.open("https://rock-paper-scissors-4a35f.web.app/");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -60,8 +75,12 @@ function Projects({}: Props) {
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className=" text-2xl font-semibold text-center">
-                <span className="underline decoration-[#04aef5]/50">
-                  還在GitHub上之 {index + 1}
+                <span
+                  className="underline decoration-[#04aef5]/50"
+                  onClick={project.link ? handleClickProject : () => {}}
+                  style={project.link ? { cursor: "pointer" } : {}}
+                >
+                  {project.note}
                 </span>
               </h4>
               <p className="text-lg text-center md:text-left">
