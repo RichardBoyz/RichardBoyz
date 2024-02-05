@@ -26,7 +26,7 @@ export default function About({}: Props) {
          md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]
          mt-5 md:mt-0
         "
-          src="https://drive.google.com/uc?id=1b7saXJaSwXDi9Q_6u_rYia5wnpoLcLdf"
+          src="https://hackmd.io/_uploads/SJaZeo09p.png"
         />
 
         <div className="space-y-10 px-0 md:px-10 pt-4 md:pt-0">

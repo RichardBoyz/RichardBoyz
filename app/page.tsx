@@ -64,7 +64,7 @@ export default function Home() {
               onClick={handleScroll}
               data-name="hero"
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://drive.google.com/uc?id=1KVr3bH8vgATepmnDf1vSQ3yuOPZoPixO"
+              src="https://hackmd.io/_uploads/BksxgoCc6.jpg"
               alt=""
             />
           </div>

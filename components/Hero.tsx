@@ -35,7 +35,7 @@ export default function Hero({}: Props) {
         >
           <img
             className="my--photo rounded-full h-[100px] w-[100px] object-cover"
-            src="https://drive.google.com/uc?id=1KVr3bH8vgATepmnDf1vSQ3yuOPZoPixO"
+            src="https://hackmd.io/_uploads/BksxgoCc6.jpg"
             alt=""
           />
         </motion.div>
