@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 type Props = {};
 
 function Projects({}: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const projectRefs = useRef([]);
+  const scrollContainerRef = useRef(null);
+
   const projects = [
     {
       img: "https://i.imgur.com/w7nv1WQ.jpeg",
@@ -36,6 +41,56 @@ function Projects({}: Props) {
     window.open("https://rock-paper-scissors-4a35f.web.app/");
   };
 
+  const handleScroll = () => {
+    if (!scrollContainerRef.current) return;
+
+    const { scrollLeft, clientWidth } = scrollContainerRef.current;
+    const fullWidth = (projects.length - 1) * clientWidth;
+    if (Math.floor(scrollLeft) === 0) {
+      setCurrentIndex(0);
+    } else {
+      const newIndex =
+        projects.length -
+        1 -
+        Math.floor((fullWidth - Math.floor(scrollLeft)) / clientWidth);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+  const handleClickNext = () => {
+    console.log(`handleClickNext currentIndex: ${currentIndex}`);
+    if (currentIndex < projects.length - 1) {
+      projectRefs.current[currentIndex + 1].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handleClickPrev = () => {
+    if (currentIndex > 0) {
+      projectRefs.current[currentIndex - 1].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -51,7 +106,17 @@ function Projects({}: Props) {
         Projects
       </div>
 
+      {currentIndex > 0 && (
+        <div
+          onClick={handleClickPrev}
+          className="absolute left-[1rem] z-30 p-2 bg-gray-700 text-white rounded-full cursor-pointer"
+        >
+          <ArrowLeftIcon className="text-[#5f9ea0] h-7 w-7 animate-pulse" />
+        </div>
+      )}
+
       <div
+        ref={scrollContainerRef}
         className="relative w-full flex
        overflow-x-scroll overflow-y-hidden snap-x snap-mandatory
        scrollbar scrollbar-thumb-[#5f9ea0]/80 scrollbar-track-gray-700
@@ -60,6 +125,7 @@ function Projects({}: Props) {
         {projects.map((project, index) => (
           <div
             key={index}
+            ref={(el) => (projectRefs.current[index] = el)}
             className="w-screen flex-shrink-0 
           snap-center flex flex-col space-y-5 items-center justify-center
            p-20 md:p-40 h-screen"
@@ -90,6 +156,15 @@ function Projects({}: Props) {
           </div>
         ))}
       </div>
+
+      {currentIndex < projects.length - 1 && (
+        <div
+          onClick={handleClickNext}
+          className="absolute right-[1rem] z-30 p-2 bg-gray-700 text-white rounded-full cursor-pointer"
+        >
+          <ArrowRightIcon className="text-[#5f9ea0] h-7 w-7 animate-pulse" />
+        </div>
+      )}
 
       <div className="w-full absolute top-[30%] bg-[#04aef5]/10 left-0 h-[300px] md:h-[500px] -skew-y-12"></div>
     </motion.div>
