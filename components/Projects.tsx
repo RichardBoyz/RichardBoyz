@@ -59,19 +59,25 @@ function Projects({}: Props) {
 
   useEffect(() => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.addEventListener("scroll", handleScroll);
+      (scrollContainerRef.current as any).addEventListener(
+        "scroll",
+        handleScroll
+      );
     }
 
     return () => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.removeEventListener("scroll", handleScroll);
+        (scrollContainerRef.current as any).removeEventListener(
+          "scroll",
+          handleScroll
+        );
       }
     };
   }, []);
   const handleClickNext = () => {
     console.log(`handleClickNext currentIndex: ${currentIndex}`);
     if (currentIndex < projects.length - 1) {
-      projectRefs.current[currentIndex + 1].scrollIntoView({
+      (projectRefs.current[currentIndex + 1] as any).scrollIntoView({
         behavior: "smooth",
         block: "nearest",
         inline: "start",
@@ -82,7 +88,7 @@ function Projects({}: Props) {
 
   const handleClickPrev = () => {
     if (currentIndex > 0) {
-      projectRefs.current[currentIndex - 1].scrollIntoView({
+      (projectRefs.current[currentIndex - 1] as any).scrollIntoView({
         behavior: "smooth",
         block: "nearest",
         inline: "start",
@@ -125,7 +131,7 @@ function Projects({}: Props) {
         {projects.map((project, index) => (
           <div
             key={index}
-            ref={(el) => (projectRefs.current[index] = el)}
+            ref={(el: any) => ((projectRefs.current[index] as any) = el)}
             className="w-screen flex-shrink-0 
           snap-center flex flex-col space-y-5 items-center justify-center
            p-20 md:p-40 h-screen"
