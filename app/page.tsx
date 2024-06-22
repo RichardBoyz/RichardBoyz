@@ -54,9 +54,9 @@ export default function Home() {
           <Projects></Projects>
         </section>
 
-        <section id="contact" className="snap-start">
+        {/* <section id="contact" className="snap-start">
           <ContactMe></ContactMe>
-        </section>
+        </section> */}
 
         <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
