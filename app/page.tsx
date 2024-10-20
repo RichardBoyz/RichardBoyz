@@ -4,6 +4,7 @@ import ContactMe from "@/components/ContactMe";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import ProjectSlide from "@/components/ProjectSlide";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
 import { MouseEventHandler, useState } from "react";
@@ -52,6 +53,10 @@ export default function Home() {
 
         <section id="projects" className="snap-center">
           <Projects></Projects>
+        </section>
+
+        <section id="project-slides" className="snap-center">
+          <ProjectSlide />
         </section>
 
         {/* <section id="contact" className="snap-start">
