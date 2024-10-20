@@ -115,4 +115,9 @@ body {
   focus:text-[#6d7e45]/70 hover:border-[#6d7e45]/70
   dark:focus:text-[#04aef5]/40 dark:hover:border-[#04aef5]/40;
   }
+
+  .slide-rotate-3d {
+    @apply transform;
+    transform: rotate3d(1, -1.5, 0, 30deg);
+  }
 }
