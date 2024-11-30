@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
 import { MouseEventHandler, useState } from "react";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
@@ -28,6 +29,7 @@ export default function Home() {
         darkMode ? "dark dark--mode__animation" : "light--mode__animation"
       } main--page__color`}
     >
+      <GoogleAnalytics />
       <main className="flex min-h-screen flex-col items-center overflow-visible dark:bg-black background--color z-0">
         {/* <section className="bg-blue-300 w-full h-12 flex fixed">
           <button onClick={() => setDarkMode(!darkMode)}>Dark mode</button>
