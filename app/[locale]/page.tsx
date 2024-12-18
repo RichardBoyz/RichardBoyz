@@ -8,8 +8,10 @@ import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
 import { MouseEventHandler, useState } from "react";
 import { GoogleAnalytics } from "nextjs-google-analytics";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -59,6 +61,8 @@ export default function Home() {
         {/* <section id="contact" className="snap-start">
           <ContactMe></ContactMe>
         </section> */}
+
+        <div>{t("title")}</div>
 
         <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
