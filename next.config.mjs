@@ -1,8 +1,10 @@
-const { config } = require("process");
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg/,
@@ -16,9 +18,9 @@ const nextConfig = {
 
     return config;
   },
-  env:{
-    NEXT_PUBLIC_GA_MEASUREMENT_ID : process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
-  }
+  env: {
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+  },
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);
