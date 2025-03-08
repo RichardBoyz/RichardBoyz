@@ -1,8 +1,7 @@
-import React from "react";
-import { SocialIcon } from "react-social-icons";
-import { MouseEventHandler } from "react";
-import { motion } from "framer-motion";
 import { FileText } from "@/assets";
+import { motion } from "framer-motion";
+import { MouseEventHandler } from "react";
+import { SocialIcon } from "react-social-icons";
 type Props = { setDarkModeAction: MouseEventHandler };
 
 export default function Header({ setDarkModeAction }: Props) {
@@ -10,7 +9,10 @@ export default function Header({ setDarkModeAction }: Props) {
     window.location.href = "mailto:r1382333@gmail.com";
   };
   const openResume = () => {
-    window.open("https://www.cakeresume.com/r1382333", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1WFNvYh5tAGJK4wpNmaMqBovpHgnv9-kW/view?usp=sharing",
+      "_blank"
+    );
   };
   return (
     <header className="header">
