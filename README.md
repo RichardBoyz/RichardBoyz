@@ -1,8 +1,8 @@
 # Hi, I'm RichardBoyz 👋
 
-Frontend engineer based in Kyoto, Japan ⛩️ — 5 years of full-stack experience, now focused on visual, interactive, and 3D experiences on the web.
+Full-stack engineer based in Kyoto, Japan ⛩️ — 5 years across frontend and backend, with a soft spot for visual, interactive, and 3D experiences on the web.
 
-座標京都的前端工程師 ／ 京都在住のフロントエンドエンジニア
+座標京都的全端工程師 ／ 京都在住のフルスタックエンジニア
 
 - 🌐 Personal site — step into an interactive 3D room: [www.richardboyz.info](https://www.richardboyz.info/)
 - 🔭 Currently building the frontend of an AI agent platform (React, MUI)
