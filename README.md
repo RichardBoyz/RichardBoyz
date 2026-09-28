@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hi, I'm RichardBoyz 👋
 
-## Getting Started
+Frontend engineer based in Kyoto, Japan ⛩️ — 5 years of full-stack experience, now focused on visual, interactive, and 3D experiences on the web.
 
-First, run the development server:
+座標京都的前端工程師 ／ 京都在住のフロントエンドエンジニア
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- 🌐 Personal site — step into an interactive 3D room: [nextjs-personal-website-three-wine.vercel.app](https://nextjs-personal-website-three-wine.vercel.app)
+- 🔭 Currently building the frontend of an AI agent platform (React, MUI)
+- 🌱 Learning DevOps — CI/CD and cloud infrastructure
+- 📷 Off the clock: travel, photography, co-op games, and collecting Japanese manhole covers
+- 📫 r1382333@gmail.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Frontend** — TypeScript, React / Next.js, Vue 2/3, Three.js, Flutter
+- **Backend** — Node.js / NestJS, Python / Django (DRF), PostgreSQL, MySQL, MongoDB, Redis
+- **Tools** — Git, Docker, AWS, MinIO, Blender
