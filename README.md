@@ -4,7 +4,7 @@ Frontend engineer based in Kyoto, Japan ⛩️ — 5 years of full-stack experie
 
 座標京都的前端工程師 ／ 京都在住のフロントエンドエンジニア
 
-- 🌐 Personal site — step into an interactive 3D room: [nextjs-personal-website-three-wine.vercel.app](https://nextjs-personal-website-three-wine.vercel.app)
+- 🌐 Personal site — step into an interactive 3D room: [www.richardboyz.info](https://www.richardboyz.info/)
 - 🔭 Currently building the frontend of an AI agent platform (React, MUI)
 - 🌱 Learning DevOps — CI/CD and cloud infrastructure
 - 📷 Off the clock: travel, photography, co-op games, and collecting Japanese manhole covers
